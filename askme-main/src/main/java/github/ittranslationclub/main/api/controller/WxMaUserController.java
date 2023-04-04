@@ -39,7 +39,7 @@ public class WxMaUserController {
     @GetMapping("/login")
     public Result<String> login(@RequestParam String appid, @RequestParam String code) throws Exception {
         if (StpUtil.isLogin()) {
-            return Result.ok(StpUtil.getLoginIdAsString());
+            return Result.ok(StpUtil.getTokenValue());
         }
         if (StringUtils.isBlank(code) || StringUtils.isBlank(appid))
             throw new Exception(WxMiniConstant.LOGIN_APP_ID_MISS);
@@ -53,8 +53,9 @@ public class WxMaUserController {
             // 根据openId进行登录
             StpUtil.login(session.getSessionKey());
             log.info("用户登录成功 openId: {}, sessionKey: {}", session.getOpenid(), session.getSessionKey());
-
-            return Result.ok(session.getSessionKey());
+            log.info("用户登录成功 openId: {}, sessionKey: {}", session.getOpenid(), session.getSessionKey());
+            System.out.println(StpUtil.getTokenValue());
+            return Result.ok(StpUtil.getTokenValue());
         } catch (WxErrorException e) {
             log.error(e.getMessage(), e);
             throw new Exception(e);
