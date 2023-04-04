@@ -1,0 +1,4 @@
+github.ittranslationclub.utils.EnhanceAutoBeanConfig
+github.ittranslationclub.utils.security.SsoSecurityProperties
+github.ittranslationclub.utils.jasypt.JasyptConfig
+github.ittranslationclub.utils.exception.ExceptionConfig

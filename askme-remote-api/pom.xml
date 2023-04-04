@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>github.ittranslationclub</groupId>
+        <artifactId>askme</artifactId>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>askme-remote-api</artifactId>
+    <version>${revision}</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>askme-chatgpt-remote-api</module>
+    </modules>
+
+    <properties>
+
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>github.ittranslationclub</groupId>
+            <artifactId>askme-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>github.ittranslationclub</groupId>
+            <artifactId>askme-parent</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>github.ittranslationclub</groupId>
+            <artifactId>askme-utils</artifactId>
+        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>github.ittranslationclub</groupId>-->
+<!--            <artifactId>valid-start-askme</artifactId>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>github.ittranslationclub</groupId>-->
+<!--            <artifactId>knife4j-start-askme</artifactId>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>github.ittranslationclub</groupId>-->
+<!--            <artifactId>excel-start-askme</artifactId>-->
+<!--        </dependency>-->
+    </dependencies>
+
+</project>

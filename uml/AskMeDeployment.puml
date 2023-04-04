@@ -1,0 +1,25 @@
+@startuml
+'https://plantuml.com/deployment-diagram
+cloud cchen.xx.com {
+    package foreProject
+    boundary nginx
+}
+cloud 152.32.xx.xx {
+    package chatGPT
+}
+cloud 124.71.xx.xx {
+    database userInfo
+    database askMe
+    database redis
+}
+cloud 47.108.xx.xx {
+    component nacos
+    package user
+}
+userInfo --> user
+askMe --> userInfo
+user --> nacos
+chatGPT --> nacos
+foreProject -- nginx
+foreProject -- user : http
+@enduml

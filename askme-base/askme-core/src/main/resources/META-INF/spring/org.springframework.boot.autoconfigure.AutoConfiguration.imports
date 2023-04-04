@@ -1,0 +1,6 @@
+github.ittranslationclub.core.server.ServerAutoConfiguration
+github.ittranslationclub.core.shutdown.ShutdownAutoConfiguration
+github.ittranslationclub.core.security.config.SecurityAutoComponent
+github.ittranslationclub.core.security.config.SecurityAutoConfiguration
+github.ittranslationclub.core.schedule.ScheduleAutoConfig
+github.ittranslationclub.core.LifeCoreAutoConfig

@@ -1,0 +1,33 @@
+@startuml
+package askme {
+    package "askme-base" {
+        package "askme-common" {
+        }
+        package "askme-utils" {
+        }
+    }
+    package "askme-chatgpt" {
+    }
+    package "askme-main" {
+    }
+    package "askme-parent" {
+    }
+    package "askme-remote-api" {
+        package "askme-chatgpt-remote-api" {
+        }
+    }
+    package "askme-start-parent" {
+        package "xxx-start-askme" {
+        }
+    }
+}
+
+"askme-parent" --> "askme-start-parent"
+"askme-base" --> "askme-start-parent"
+"askme-base" --> "askme-remote-api"
+"askme-parent" --> "askme-remote-api"
+"askme-remote-api" --> "askme-chatgpt"
+"askme-start-parent" --> "askme-chatgpt"
+"askme-remote-api" --> "askme-main"
+"askme-start-parent" --> "askme-main"
+@enduml

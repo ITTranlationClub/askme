@@ -1,0 +1,42 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-github.ittranslationclub.login.cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+/askme-chatgpt/src/main/resources/application.yml
+/askme-chatgpt/src/main/resources/bootstrap.yml
+/askme-start/src/main/resources/bootstrap.yml
+/askme-start/src/main/resources/application.yml
+/askme-main/src/main/resources/bootstrap.yml
+/askme-main/src/main/resources/application.yml
+**/**/buff
+/askme-chatgpt/src/main/resources/buff/
+/askme-main/src/main/resources/buff/

@@ -1,0 +1,13 @@
+append: true
+appender: github.ittranslationclub.mybatis.start.ps6y.P6SpyLogger
+databaseDialectDateFormat: yyyy-dd-MM HH:mm:ss
+dateformat: yyyy-MM-dd HH:mm:ss
+deregisterdrivers: true
+driverlist: com.mysql.cj.jdbc.Driver
+excludecategories: info,debug,result,batc,resultset
+logMessageFormat: github.ittranslationclub.mybatis.start.ps6y.P6spyLogFormatStrategy
+logfile: spy_info.log
+module:
+    log: com.p6spy.engine.logging.P6LogFactory,com.p6spy.engine.outage.P6OutageFactory
+outagedetection: true
+outagedetectioninterval: 2
