@@ -32,7 +32,8 @@ public class SaTokenConfigure implements WebMvcConfigurer {
                         "/webjars/**",
                         "/",
                         "/cover",
-                        "/wxmini/user/login"
+                        "/wxmini/user/login",
+                        "/chatgpt/askquestion"
                 );
     }
 
