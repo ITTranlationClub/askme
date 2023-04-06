@@ -14,7 +14,7 @@
         <module>askme-base</module>
 <!--        <module>askme-start</module>-->
 <!--        <module>askme-login</module>-->
-<!--        <module>askme-main</module>-->
+        <module>askme-main</module>
         <module>askme-chatgpt</module>
         <module>askme-parent</module>
         <module>askme-start-parent</module>
