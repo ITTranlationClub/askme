@@ -24,6 +24,7 @@
         <module>dubbo-start-askme</module>
         <module>excel-start-askme</module>
         <module>valid-start-askme</module>
+        <module>cors-start-parent</module>
     </modules>
 
     <dependencies>
