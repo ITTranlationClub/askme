@@ -7,6 +7,7 @@ import cn.binarywang.wx.miniapp.bean.WxMaUserInfo;
 import cn.binarywang.wx.miniapp.util.WxMaConfigHolder;
 import cn.hutool.json.JSONUtil;
 import cn.dev33.satoken.stp.StpUtil;
+import github.ittranslationclub.common.log.LogAdvice;
 import github.ittranslationclub.main.infrastructure.constant.WxMiniConstant;
 import github.ittranslationclub.utils.result.Result;
 import io.swagger.v3.oas.annotations.Operation;
@@ -35,6 +36,7 @@ public class WxMaUserController {
         this.wxMaService = wxMaService;
     }
 
+    @LogAdvice
     @Operation(summary = "提交用户验证信息,登录小程序")
     @GetMapping("/login")
     public Result<String> login(@RequestParam String appid, @RequestParam String code) throws Exception {
@@ -69,6 +71,8 @@ public class WxMaUserController {
      * 获取用户信息接口
      * </pre>
      */
+    @LogAdvice
+    @Operation(summary = "获取用户头像,昵称等个人信息")
     @GetMapping("/info")
     public String info(@PathVariable String appid, String sessionKey,
                        String signature, String rawData, String encryptedData, String iv) {
@@ -93,6 +97,8 @@ public class WxMaUserController {
      * 获取用户绑定手机号信息
      * </pre>
      */
+    @LogAdvice
+    @Operation(summary = "获取用户手机号")
     @GetMapping("/phone")
     public String phone(@PathVariable String appid, String sessionKey, String signature,
                         String rawData, String encryptedData, String iv) {

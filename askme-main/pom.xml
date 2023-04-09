@@ -16,6 +16,10 @@
 
     <dependencies>
         <dependency>
+            <groupId>github.ittranslationclub</groupId>
+            <artifactId>cors-start-askme</artifactId>
+        </dependency>
+        <dependency>
             <groupId>com.github.jedis-lock</groupId>
             <artifactId>jedis-lock</artifactId>
         </dependency>

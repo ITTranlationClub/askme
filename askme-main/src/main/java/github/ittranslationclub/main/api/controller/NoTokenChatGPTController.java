@@ -14,25 +14,23 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.io.IOException;
-
 /**
  * @program: askme
- * @description: chatGPT 功能实现类
+ * @description: chatGPT功能控制器,用于http调用, 方便定位问题
  * @author: gaoxiang
  * @email: 630268696@qq.com
- * @create: 2023-04-02 16:51
+ * @create: 2023-04-01 19:36
  **/
 @Slf4j
 @RestController
-@RequestMapping("/chatgpt")
-@Tag(name = "chatGPT 相关功能控制器", description = "当微服务不可用时,使用该接口定位问题原因")
-public class ChatGPTController {
+@RequestMapping("/notoken/chatgpt")
+@Tag(name = "notoken-chatGPT 相关功能控制器", description = "不进行 token 验证的 chatgpt 聊天接口")
+public class NoTokenChatGPTController {
 
     ChatGPTRemoteService chatGPTRemoteService;
 
     @Autowired
-    public ChatGPTController(ChatGPTRemoteService chatGPTRemoteService) {
+    public NoTokenChatGPTController(ChatGPTRemoteService chatGPTRemoteService) {
         this.chatGPTRemoteService = chatGPTRemoteService;
     }
 

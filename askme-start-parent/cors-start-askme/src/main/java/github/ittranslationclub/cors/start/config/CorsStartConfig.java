@@ -1,10 +1,12 @@
-package github.ittranslationclub.cors.start.config;/*
+package github.ittranslationclub.cors.start.config;
+
+/*
  * ClassName: CorsStartConfig
  * Description:
  * @Author: zjh
  * @Create: 2023/4/5
  */
-
+import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.CorsConfiguration;

@@ -33,7 +33,10 @@ public class SaTokenConfigure implements WebMvcConfigurer {
                         "/",
                         "/cover",
                         "/wxmini/user/login",
-                        "/chatgpt/askquestion"
+                        "/chatgpt/askquestion",
+                        "/doc.html",
+                        "/notoken/**",
+                        "/**"
                 );
     }
 

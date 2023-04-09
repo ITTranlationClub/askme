@@ -122,6 +122,11 @@
             </dependency>
             <dependency>
                 <groupId>github.ittranslationclub</groupId>
+                <artifactId>cors-start-askme</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>github.ittranslationclub</groupId>
                 <artifactId>mybatis-start-askme</artifactId>
                 <version>${revision}</version>
             </dependency>

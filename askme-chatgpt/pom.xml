@@ -23,6 +23,10 @@
 <!--        </dependency>-->
         <dependency>
             <groupId>github.ittranslationclub</groupId>
+            <artifactId>cors-start-askme</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>github.ittranslationclub</groupId>
             <artifactId>askme-utils</artifactId>
         </dependency>
 
