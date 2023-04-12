@@ -19,6 +19,7 @@
         <module>askme-parent</module>
         <module>askme-start-parent</module>
         <module>askme-remote-api</module>
+        <module>askme-gateway</module>
     </modules>
 
     <description>Demo project for Spring Boot</description>

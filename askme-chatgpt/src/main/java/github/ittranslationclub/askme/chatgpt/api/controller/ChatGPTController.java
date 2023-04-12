@@ -1,8 +1,7 @@
 package github.ittranslationclub.askme.chatgpt.api.controller;
 
-import github.ittranslationclub.askme.chatgpt.api.remote.ChatGPTRemoteServiceImpl;
 import github.ittranslationclub.askme.chatgpt.app.service.OpenAiChatService;
-import github.ittranslationclub.askme.chatgpt.app.service.impl.OpenAiChatServiceImpl;
+import github.ittranslationclub.askme.chatgpt.infrastructure.annotation.IpMax;
 import github.ittranslationclub.common.dto.openai.ChatMessagesDto;
 import github.ittranslationclub.common.dto.openai.ChatResultDto;
 import github.ittranslationclub.common.log.LogAdvice;
@@ -11,16 +10,11 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import java.io.IOException;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @program: askme
- * @description: chatGPT功能控制器,用于http调用, 方便定位问题
+ * @description: chatGPT功能控制器, 用于http调用, 方便定位问题
  * @author: gaoxiang
  * @email: 630268696@qq.com
  * @create: 2023-04-01 19:36
@@ -42,6 +36,7 @@ public class ChatGPTController {
     @Operation(summary = "提交问题,并获取AI结果")
     @PostMapping(value = "/askquestion")
     public Result<String> askQuestion(@RequestBody ChatMessagesDto chatMessagesDto) throws Exception {
+
         // 增加业务判断逻辑
         ChatResultDto chatResultDto = openAiChatService.askByChatPattern(chatMessagesDto).get();
 
@@ -61,4 +56,12 @@ public class ChatGPTController {
         String result = chatResultDto.getChoices().get(0).getMessage().getContent();
         return Result.ok(result);
     }
+
+    @IpMax(count = 3, time = 10)
+    @GetMapping(value = "/test")
+    public Result<String> test() {
+        return Result.ok("成功");
+    }
+
+
 }

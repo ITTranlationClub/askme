@@ -1,0 +1,21 @@
+## 微服务基础配置文件
+#spring:
+#  application:
+#    name: askme-gateway
+#  cloud:
+#    nacos:
+##      server-addr: 124.71.84.228:8848
+#      discovery:
+#        server-addr: localhost:8848
+#      #      namespace: public
+#      #      group: APPLICATION
+##      username: nacos
+##      password: gaoxiang15125
+#      #      discovery:
+#      #        enabled: true
+#      #        group: ${spring.cloud.nacos.group}
+#      #        namespace: ${spring.cloud.nacos.namespace}
+##      config:
+##        enabled: false
+##        namespace: 4c39721f-ad15-47f7-b868-ac5b0ed61a8b
+##        group: dev
