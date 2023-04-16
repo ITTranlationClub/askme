@@ -81,10 +81,22 @@
         <orika.version>1.5.4</orika.version>
         <easyexcel.version>3.1.3</easyexcel.version>
         <jasypt.version>3.0.4</jasypt.version>
+        <aliTranslation.version>1.0.3</aliTranslation.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <!--  阿里翻译SDK  -->
+            <dependency>
+                <groupId>com.aliyun</groupId>
+                <artifactId>alimt20181012</artifactId>
+                <version>${aliTranslation.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.theokanning.openai-gpt3-java</groupId>
+                <artifactId>service</artifactId>
+                <version>0.12.0</version>
+            </dependency>
             <dependency>
                 <groupId>com.github.jedis-lock</groupId>
                 <artifactId>jedis-lock</artifactId>

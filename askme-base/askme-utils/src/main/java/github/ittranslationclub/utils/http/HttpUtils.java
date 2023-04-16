@@ -85,6 +85,6 @@ public class HttpUtils {
         }
         String result = httpRequest.execute().body();
         log.info("httpsPost methods result is {}", result);
-        return httpRequest.execute().body();
+        return result;
     }
 }

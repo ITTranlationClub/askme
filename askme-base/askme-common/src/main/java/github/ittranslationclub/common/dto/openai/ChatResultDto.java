@@ -22,5 +22,8 @@ public class ChatResultDto implements Serializable {
 
     String created;
 
+    String model;
+
+
     List<ChoicesItemDto> choices;
 }

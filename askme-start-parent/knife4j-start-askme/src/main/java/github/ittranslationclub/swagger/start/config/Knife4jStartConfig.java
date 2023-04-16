@@ -22,7 +22,8 @@ public class Knife4jStartConfig {
 
     private static final String PATHS_TO_MATCH = "/**";
 
-    private static final String[] PACKAGED_TO_MATCH = {"github.ittranslationclub.main.api.controller"};
+    private static final String[] PACKAGED_TO_MATCH = {"github.ittranslationclub.main.api.controller",
+                                                       "github.ittranslationclub.askme.chatgpt.api.controller"};
 
 
     /**

@@ -1,4 +1,4 @@
-package github.ittranslationclub.utils.test;
+package github.ittranslationclub.utils;
 
 import cn.hutool.json.JSONUtil;
 import github.ittranslationclub.utils.kvp.Kvp;

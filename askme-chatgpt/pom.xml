@@ -17,6 +17,14 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.aliyun</groupId>
+            <artifactId>alimt20181012</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.theokanning.openai-gpt3-java</groupId>
+            <artifactId>service</artifactId>
+        </dependency>
 <!--        <dependency>-->
 <!--            <groupId>github.ittranslationclub</groupId>-->
 <!--            <artifactId>askme-core</artifactId>-->

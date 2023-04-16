@@ -1,4 +1,4 @@
-package github.ittranslationclub.utils.test;
+package github.ittranslationclub.utils;
 
 import github.ittranslationclub.utils.jasypt.JasyptUtils;
 import lombok.extern.slf4j.Slf4j;

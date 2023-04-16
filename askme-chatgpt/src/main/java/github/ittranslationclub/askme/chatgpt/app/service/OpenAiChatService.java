@@ -3,6 +3,7 @@ package github.ittranslationclub.askme.chatgpt.app.service;
 import github.ittranslationclub.common.dto.openai.ChatMessagesDto;
 import github.ittranslationclub.common.dto.openai.ChatResultDto;
 
+import java.io.File;
 import java.util.Optional;
 
 /**
@@ -17,4 +18,6 @@ public interface OpenAiChatService {
     Optional<ChatResultDto> askByChatPattern(ChatMessagesDto message) throws Exception;
 
     Optional<ChatResultDto> askByProChatPattern(ChatMessagesDto message) throws Exception;
+
+    void transMarkDownToFile(File fileInfo);
 }

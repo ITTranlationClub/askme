@@ -8,6 +8,7 @@ import org.springframework.util.StringUtils;
 
 import java.net.InetSocketAddress;
 import java.net.Proxy;
+import java.time.Duration;
 
 /**
  * @program: askme
@@ -20,6 +21,10 @@ import java.net.Proxy;
 @Data
 @Configuration
 public class ChatGPTConfig {
+
+    static int WORD_LIMIT = 4000;
+
+    public final static Duration DEFAULT_TIMEOUT = Duration.ofSeconds(400L);
 
     @Value("${open.base.chatProxyUrl}")
     private String chatProxyUrl;
@@ -52,6 +57,9 @@ public class ChatGPTConfig {
     @Value("${open.proxy.port}")
     private String proxyPort;
 
+    @Value("${open.limit.length}")
+    private String limitLength;
+
     private Proxy proxy;
 
     public Proxy getChatProxy() {
@@ -66,4 +74,8 @@ public class ChatGPTConfig {
         return proxy;
     }
 
+    public Integer getLimitLength() {
+        int limit = Integer.parseInt(limitLength);
+        return Math.max(limit, WORD_LIMIT);
+    }
 }
