@@ -6,6 +6,10 @@ spring:
   cloud:
     nacos:
       server-addr: localhost:8848
+    sentinel:
+      transport:
+        port: 8719 #传输端口
+        dashboard: localhost:8080 #配置sentinel dashboard地址
     gateway:
       discovery:
         locator:

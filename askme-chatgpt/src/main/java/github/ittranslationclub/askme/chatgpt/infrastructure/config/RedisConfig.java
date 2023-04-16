@@ -25,20 +25,5 @@ import java.time.Duration;
 
 @Configuration
 public class RedisConfig {
-    /**
-     * redis序列化的工具配置类，下面这个请一定开启配置
-     */
-    @Bean
-    public RedisTemplate<String, Object> redisTemplate(LettuceConnectionFactory lettuceConnectionFactory) {
-        RedisTemplate<String,Object> redisTemplate = new RedisTemplate<>();
-        redisTemplate.setConnectionFactory(lettuceConnectionFactory);
-        //设置key序列化方式string
-        redisTemplate.setKeySerializer(new StringRedisSerializer());
-        //设置value的序列化方式json，使用GenericJackson2JsonRedisSerializer替换默认序列化
-        redisTemplate.setValueSerializer(new GenericJackson2JsonRedisSerializer());
-        redisTemplate.setHashKeySerializer(new StringRedisSerializer());
-        redisTemplate.setHashValueSerializer(new GenericJackson2JsonRedisSerializer());
-        redisTemplate.afterPropertiesSet();
-        return redisTemplate;
-    }
+
 }

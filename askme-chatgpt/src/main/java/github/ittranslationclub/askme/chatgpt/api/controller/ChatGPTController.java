@@ -12,6 +12,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * @program: askme
  * @description: chatGPT功能控制器, 用于http调用, 方便定位问题
@@ -56,12 +58,5 @@ public class ChatGPTController {
         String result = chatResultDto.getChoices().get(0).getMessage().getContent();
         return Result.ok(result);
     }
-
-    @IpMax(count = 3, time = 10)
-    @GetMapping(value = "/test")
-    public Result<String> test() {
-        return Result.ok("成功");
-    }
-
 
 }
