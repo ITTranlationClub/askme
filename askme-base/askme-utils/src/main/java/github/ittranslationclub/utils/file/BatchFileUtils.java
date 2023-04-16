@@ -17,7 +17,7 @@ public class BatchFileUtils {
     /**
      * 扫描文件
      */
-    public static void scanFiles(String rootPath,Consumer<File> consumer) {
+    public static void scanFiles(String rootPath, Consumer<File> consumer) {
         try {
             File[] files = FileUtil.ls(rootPath);
             for (File file : files) {
@@ -35,8 +35,8 @@ public class BatchFileUtils {
 
         String[] blankStrList = content.split(System.lineSeparator());
         StringBuilder buffBuilder = new StringBuilder();
-        for(String buffStr:blankStrList) {
-            if((buffStr.length() + buffBuilder.length())>4000) {
+        for (String buffStr : blankStrList) {
+            if ((buffStr.length() + buffBuilder.length()) > 4000) {
                 buffBuilder.append(System.lineSeparator());
                 buffBuilder.append(System.lineSeparator());
                 resultList.add(buffBuilder.toString());
@@ -44,7 +44,7 @@ public class BatchFileUtils {
             }
             buffBuilder.append(buffStr);
         }
-        if(!buffBuilder.isEmpty())
+        if (!buffBuilder.isEmpty())
             resultList.add(buffBuilder.toString());
         return resultList;
     }
@@ -55,17 +55,18 @@ public class BatchFileUtils {
      * @param fileParent
      */
     private static void dfs(File fileParent, Consumer<File> consumer) {
-        if(fileParent.isDirectory()) {
+        if (fileParent.isDirectory()) {
             File[] childrenFiles = fileParent.listFiles();
             for (File child : childrenFiles) {
                 dfs(child, consumer);
             }
             String newFileName = fileParent.getName().replaceAll("(?: |-)", "");
-            if(!newFileName.equals(fileParent.getName()))
-                FileUtil.rename(fileParent, fileParent.getName().replaceAll("(?: |-)", ""),true);
+            if (!newFileName.equals(fileParent.getName()))
+                FileUtil.rename(fileParent, fileParent.getName().replaceAll("(?: |-)", ""), true);
             return;
         }
         consumer.accept(fileParent);
 //        FileUtil.rename(fileParent, fileParent.getName().replaceAll("(?: |-)", ""), true);
     }
+
 }
